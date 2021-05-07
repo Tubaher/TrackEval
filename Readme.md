@@ -86,18 +86,14 @@ In order to use the track eval, it is important to follow this guide:
 
 3. Go to the `<desired output folder path>` and you will find the kitti track txt files.
 
-### Group output KITTI tracker files into a single file.
+### Group output KITTI tracker files into a single file and format as JSON file.
 
 - Run the following line:
 ```
 python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
 ```
-- Output: KITTI_CUMMULATED.txt
-### Format the KITTI_CUMMULATED as JSON file.
-- Run the following line:
-```
-python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
-```
+- Output: KITTI_CUMMULATED.txt, formated_KITTI_CUMMULATED.txt
+
 ### Subir el JSON e imagenes a VGG Image Annotator
 
 1. Modify [`get_frames.py`](utils/get_frames.py) to configure the video input, the output folder for the frames and to configure the frames names. It is important to know that kitti track files have a name in a specific format Ex: `00_000_000000.txt` corresponding to the frame 0.  
@@ -118,7 +114,8 @@ python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FO
 
 ### Descargar el JSON
 
-### Pasar JSON a formato Kitty 
+### Format VGG output file as KITTI file
+
 
 ## DeepStream Configuration files
 The configs used for the tracker evaluation can be found in deepstream_configs/.. . An explanation of the configs used are:
