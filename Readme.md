@@ -92,13 +92,7 @@ In order to use the track eval, it is important to follow this guide:
 ```
 python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
 ```
-- Output: KITTI_CUMMULATED.txt
-### Format the KITTI_CUMMULATED as JSON file.
-- Run the following line:
-```
-python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
-```
-- Output: KITTI_CUMMULATED.txt , formated_KITTI_CUMMULATED.txt
+- Output: KITTI_CUMMULATED.txt, formated_KITTI_CUMMULATED.txt
 
 ### Subir el JSON e imagenes a VGG Image Annotator
 
