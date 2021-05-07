@@ -1,0 +1,215 @@
+################################################################################
+# Copyright (c) 2020, NVIDIA CORPORATION. All rights reserved.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+# DEALINGS IN THE SOFTWARE.
+################################################################################
+
+# The values in the config file are overridden by values set through GObject
+# properties.
+
+[property]
+enable=1
+#Width height used for configuration to which below configs are configured
+config-width=1920
+config-height=1080
+#osd-mode 0: Dont display any lines, rois and text
+#         1: Display only lines, rois and static text i.e. labels
+#         2: Display all info from 1 plus information about counts
+osd-mode=2
+#Set OSD font size that has to be displayed
+display-font-size=12
+
+## Per stream configuration
+[roi-filtering-stream-0]
+#enable or disable following feature
+enable=0
+#ROI to filter select objects, and remove from meta data
+roi-RF=295;643;579;634;642;913;56;828
+#remove objects in the ROI
+inverse-roi=0
+class-id=-1
+
+## Per stream configuration
+[roi-filtering-stream-2]
+#enable or disable following feature
+enable=0
+#ROI to filter select objects, and remove from meta data
+roi-RF=295;643;579;634;642;913;56;828
+#remove objects in the ROI
+inverse-roi=1
+class-id=0
+
+[overcrowding-stream-1]
+enable=0
+roi-OC=295;643;579;634;642;913;56;828
+#no of objects that will trigger OC
+object-threshold=3
+class-id=-1
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-out0=541;743;607;702;343;534;899;960
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-in0=607;702;541;743;899;960;343;534
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-out1=607;696;653;663;433;546;951;895
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-in1=653;663;607;696;951;895;433;546
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-out2=662;661;699;632;468;514;1007;846
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-in2=699;632;662;661;1007;846;468;514
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-out3=722;631;768;594;532;499;1166;848
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-in3=768;594;722;631;1166;848;532;499
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-out4=789;593;846;556;599;471;1246;782
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+[line-crossing-stream-0]
+enable=1
+#Label;direction;lc
+line-crossing-in4=846;556;789;593;1246;782;599;471
+#line-crossing-Exit=500;500;0;0;851;773;1203;732
+class-id=0
+#extended when 0- only counts crossing on the configured Line
+#              1- assumes extended Line crossing counts all the crossing
+extended=0
+#LC modes supported:
+#loose   : counts all crossing without strong adherence to direction
+#balanced: Strict direction adherence expected compared to mode=loose
+#strict  : Strict direction adherence expected compared to mode=balanced
+mode=strict
+
+

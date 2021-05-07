@@ -120,7 +120,12 @@ python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FO
 
 ### Pasar JSON a formato Kitty 
 
-### Todo lo que hizo el Diego.
+## DeepStream Configuration files
+The configs used for the tracker evaluation can be found in deepstream_configs/.. . An explanation of the configs used are:
+1. config_nvdsanalytics.txt -> 10 line crossing over the stream 0 are implemented to count people in and people out of the room.
+2. ppnet.txt -> general config for the deepstream app
+3. pri-ppnet.txt -> min-confidence for detection is set to 0.1
+4. tracker-orig.yml -> changes in feature extraction and duplicates4IOU
  
 
 
