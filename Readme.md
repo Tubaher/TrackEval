@@ -92,7 +92,7 @@ In order to use the track eval, it is important to follow this guide:
 
 ### Get the the frames (images) from the video. 
 
-1. Modify `get_frames.py` to configure the video input, the output folder for the frames and to configure the frames names.
+1. Modify `get_frames.py` to configure the video input, the output folder for the frames and to configure the frames names. It is important to know that kitti track files have a name in a specific format Ex: `00_000_000000.txt` corresponding to the frame 0.  
 
 **Note:** The name of each frame should be the same as the corresponding kitti track file. There is a unique kitti track file for each frame.  
 
