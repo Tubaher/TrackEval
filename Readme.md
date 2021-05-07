@@ -79,10 +79,18 @@ By default the code prints results to the screen, saves results out as both a su
 
 ### Sacar kittys del deepstream
 
-### Agrupar todos los kittys en un unico txt.
+### Group output KITTI tracker files into a single file.
 
-### Dar formato json al txt para subirlo al VGG Image Annotator
-
+- Run the following line:
+```
+python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
+```
+- Output: KITTI_CUMMULATED.txt
+### Format the KITTI_CUMMULATED as JSON file.
+- Run the following line:
+```
+python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
+```
 ### Subir el JSON e imagenes a VGG Image Annotator
 
 ### Custom config for VGG annotator
