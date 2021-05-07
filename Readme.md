@@ -77,7 +77,12 @@ By default the code prints results to the screen, saves results out as both a su
 
 ## Preparing the data
 
-### Sacar kittys del deepstream
+In order to use the track eval, it is important to follow this guide:
+
+### Get the kitti track txt files.
+1. Setting the output folder in ppnet.txt configuration file. The variable is `kitti-track-output-dir=<desired output folder path>`.
+2. Execute the app with the command `deepstream-transfer-learning-app -c <configuration_file_name.txt>`. In our specific case was `deepstream-transfer-learning-app -c ppnet.txt`.
+3. Go to the `<desired output folder path>` and you will find the kitti track txt files.
 
 ### Agrupar todos los kittys en un unico txt.
 
