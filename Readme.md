@@ -75,6 +75,28 @@ The implementation of CLEARMOT and ID metrics aligns perfectly with the [MOTChal
 
 By default the code prints results to the screen, saves results out as both a summary txt file and a detailed results csv file, and outputs plots of the results. All outputs are by default saved to the 'tracker' folder for each tracker.
 
+## Preparing the data
+
+### Sacar kittys del deepstream
+
+### Agrupar todos los kittys en un unico txt.
+
+### Dar formato json al txt para subirlo al VGG Image Annotator
+
+### Subir el JSON e imagenes a VGG Image Annotator
+
+### Custom config for VGG annotator
+
+### Corregir los tracker id.
+
+### Descargar el JSON
+
+### Pasar JSON a formato Kitty 
+
+### Todo lo que hizo el Diego.
+ 
+
+
 ## Running the code
 
 The code can be run in one of two ways:
