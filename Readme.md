@@ -86,11 +86,23 @@ In order to use the track eval, it is important to follow this guide:
 
 3. Go to the `<desired output folder path>` and you will find the kitti track txt files.
 
-### Agrupar todos los kittys en un unico txt.
+### Group output KITTI tracker files into a single file.
 
-### Dar formato json al txt para subirlo al VGG Image Annotator
-
+<<<<<<< HEAD
+- Run the following line:
+```
+python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
+```
+- Output: KITTI_CUMMULATED.txt
+### Format the KITTI_CUMMULATED as JSON file.
+- Run the following line:
+```
+python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
+```
+### Subir el JSON e imagenes a VGG Image Annotator
+=======
 ### Get the the frames (images) from the video. 
+>>>>>>> e4da07e93a18a1ad45397cdc0b704c6ca55967fe
 
 1. Modify `get_frames.py` to configure the video input, the output folder for the frames and to configure the frames names. It is important to know that kitti track files have a name in a specific format Ex: `00_000_000000.txt` corresponding to the frame 0.  
 
