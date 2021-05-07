@@ -112,10 +112,6 @@ python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FO
 
 ### Custom config for VGG annotator
 
-### Descargar el JSON
-
-### Pasar JSON a formato Kitty 
-
 ## DeepStream Configuration files
 The configs used for the tracker evaluation can be found in deepstream_configs/.. . An explanation of the configs used are:
 1. config_nvdsanalytics.txt -> 10 line crossing over the stream 0 are implemented to count people in and people out of the room.
