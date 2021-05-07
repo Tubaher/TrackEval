@@ -106,6 +106,9 @@ python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FO
 
 2. Execute [`get_frames.py`](utils/get_frames.py).
 
+### Custom config for VGG annotator
+To use the VGG Image annotator we need to add attributes to the annotations. We have to add specifically region attributes for: tracker_id, frame_id and name
+
 ### Using VGG Image Annotator to make tracker id corrections in each video frame. 
 
 1. Go to VGG Image Annotator https://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html.
@@ -114,11 +117,9 @@ python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FO
 
 3. Correct each track id in each frame.
 
-### Custom config for VGG annotator
-
-### Descargar el JSON
-
-### Pasar JSON a formato Kitty 
+### from JSON vgg annotations to KITTI format for video sequence
+After we obtain the gt labels from the VGG annotator, we just have to excecute the notebook json2kitti to obatain
+a kitti txt file for that specific video sequence.
 
 ## DeepStream Configuration files
 The configs used for the tracker evaluation can be found in deepstream_configs/.. . An explanation of the configs used are:
@@ -126,7 +127,6 @@ The configs used for the tracker evaluation can be found in deepstream_configs/.
 2. ppnet.txt -> general config for the deepstream app
 3. pri-ppnet.txt -> min-confidence for detection is set to 0.1
 4. tracker-orig.yml -> changes in feature extraction and duplicates4IOU
- 
 
 
 ## Running the code
