@@ -77,10 +77,18 @@ By default the code prints results to the screen, saves results out as both a su
 
 ## Preparing the data
 
-### Sacar kittys del deepstream
+In order to use the track eval, it is important to follow this guide:
+
+### Get the kitti track txt files.
+1. Setting the output folder in ppnet.txt configuration file. The variable is `kitti-track-output-dir=<desired output folder path>`.
+
+2. Execute the app with the command `deepstream-transfer-learning-app -c <configuration_file_name.txt>`. In our specific case was `deepstream-transfer-learning-app -c ppnet.txt`.
+
+3. Go to the `<desired output folder path>` and you will find the kitti track txt files.
 
 ### Group output KITTI tracker files into a single file.
 
+<<<<<<< HEAD
 - Run the following line:
 ```
 python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
@@ -92,10 +100,25 @@ python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FO
 python utils/file_formater_JSON_to_KITTI.py -file <PATH TO KITTI-TRACK ZIP OR FOLDER> -images <PATH TO FRAMES FOLDER>
 ```
 ### Subir el JSON e imagenes a VGG Image Annotator
+=======
+### Get the the frames (images) from the video. 
+>>>>>>> e4da07e93a18a1ad45397cdc0b704c6ca55967fe
+
+1. Modify `get_frames.py` to configure the video input, the output folder for the frames and to configure the frames names.
+
+**Note:** The name of each frame should be the same as the corresponding kitti track file. There is a unique kitti track file for each frame.  
+
+2. Execute `get_frames.py`.
+
+### Using VGG Image Annotator to make tracker id corrections in each video frame. 
+
+1. Go to VGG Image Annotator https://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html.
+
+2. Remove the example images and then click on "Add Files". Select all the frames and then upload them.
+
+3. Correct each track id in each frame.
 
 ### Custom config for VGG annotator
-
-### Corregir los tracker id.
 
 ### Descargar el JSON
 
