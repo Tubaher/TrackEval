@@ -86,7 +86,7 @@ In order to use the track eval, it is important to follow this guide:
 
 3. Go to the `<desired output folder path>` and you will find the kitti track txt files.
 
-### Group output KITTI tracker files into a single file.
+### Group output KITTI tracker files into a single file and give JSON format
 
 - Run the following line:
 ```
